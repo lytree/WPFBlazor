@@ -1,0 +1,29 @@
+﻿@inherits LayoutComponentBase
+<ErrorBoundary>
+    <ChildContent>
+        <main class="relative h-screen overflow-hidden bg-gray-100 dark:bg-gray-800">
+            <div class="flex items-start justify-between">
+                <div class="relative h-screen shadow-lg block w-200px">
+                    <div class="h-full bg-white dark:bg-gray-700">
+                        <div class="flex items-center justify-start pt-6 ml-8">
+                            <div class="text-xl font-bold dark:text-white">
+                                工具箱
+                            </div>
+                        </div>
+                        <nav class="mt-4">
+
+                        </nav>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full">
+                    <div class="h-screen px-4 py-4 pb-[24px] overflow-auto">
+                        @Body
+                    </div>
+                </div>
+            </div>
+        </main>
+    </ChildContent>
+    <ErrorContent>
+        <p class="errorUI">😈 A rotten gremlin got us. Sorry!</p>
+    </ErrorContent>
+</ErrorBoundary>

@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+	<PropertyGroup>
+		<TargetFrameworks>net6.0</TargetFrameworks>
+	</PropertyGroup>
+	<PropertyGroup>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Autofac" Version="7.1.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.23" />
+		<PackageReference Include="Microsoft.Fast.Components.FluentUI" Version="3.2.0" />
+	</ItemGroup>
+</Project>
