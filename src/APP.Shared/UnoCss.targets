@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<NodeCli Condition=" '$(NodeCli)'=='' ">pnpm</NodeCli>
+		<UnoCSSRunner Condition=" '$(UnoCSSRunner)'=='' ">run dev</UnoCSSRunner>
+		<UnoCSSBuild Condition=" '$(PostCssRunner)'=='' ">run build</UnoCSSBuild>
+	</PropertyGroup>
+
+	<!-- For old school inclusion -->
+	<PropertyGroup>
+		<RunDependsOn>
+			UnoCSSRunner;
+			$(RunDependsOn);
+		</RunDependsOn>
+		<BuildDependsOn>
+			UnoCSSBuild;
+			$(BuildDependsOn);
+		</BuildDependsOn>
+	</PropertyGroup>
+
+	<Target Name="UnoCSSRunner" BeforeTargets="Run" >
+		<Message Text="PostCssCompile: Compiling " Importance="high" />
+
+		<Exec
+			Command="&quot;$(NodeCli)&quot; $(UnoCSSRunner)"
+			WorkingDirectory="$(MSBuildProjectDirectory)" />
+	</Target>
+
+	<Target Name="UnoCssBuild" BeforeTargets="Build" >
+		<Message Text="PostCssCompile: Compiling" Importance="high" />
+		<Exec
+			Command="&quot;$(NodeCli)&quot; $(UnoCSSBuild)"
+			WorkingDirectory="$(MSBuildProjectDirectory)" />
+	</Target>
+
+</Project>

@@ -1,0 +1,17 @@
+{
+  "name": "APP",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "unocss  --watch",
+    "build": "unocss \"./**/*.razor\"  --out-file=\"./wwwroot/css/atomic.css\" --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@unocss/cli": "^0.56.5",
+    "unocss": "^0.56.5"
+  }
+}
