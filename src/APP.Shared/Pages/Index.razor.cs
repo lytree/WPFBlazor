@@ -18,6 +18,6 @@ public partial class Index
 
     protected override async Task OnInitializedAsync()
     {
-      var freesql =  ServiceProvider.GetAutofacRoot().Resolve<IFreeSql>();
+      
     }
 }

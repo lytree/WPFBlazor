@@ -15,7 +15,6 @@ namespace APP.Configuration
     {
         public static void AddConfigurationFeeSQL(this ContainerBuilder builder, string connect = "db.db")
         {
-            Console.WriteLine("------------------");
             builder.Register<IFreeSql>((c) =>
             {
                 var logger = c.IsRegistered<ILogger>() ? c.Resolve<ILogger>() : NullLogger.Instance;
