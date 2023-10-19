@@ -9,8 +9,13 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Autofac" Version="7.1.0" />
+		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.23" />
 		<PackageReference Include="Microsoft.Fast.Components.FluentUI" Version="3.2.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\APP.Configuration\APP.Configuration.csproj" />
+	  <ProjectReference Include="..\APP.Infrastructure\APP.Infrastructure.csproj" />
 	</ItemGroup>
 	<Import Project="UnoCSS.targets" />
 </Project>

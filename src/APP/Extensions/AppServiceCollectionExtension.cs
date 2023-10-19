@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using APP.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,8 @@ namespace APP.Extensions
     {
         public static void AddAppService(this ContainerBuilder builder)
         {
-
+           
+            builder.AddConfigurationFeeSQL();
         }
     }
 }

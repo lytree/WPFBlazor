@@ -1,8 +1,11 @@
-﻿using APP.Infrastructure.Constant;
+﻿using APP.Extensions;
+using APP.Infrastructure.Constant;
 using APP.Infrastructure.Events;
+using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using CommunityToolkit.Mvvm.Messaging;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Fast.Components.FluentUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,11 +35,13 @@ namespace APP
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddWpfBlazorWebView();
             serviceCollection.AddBlazorWebViewDeveloperTools();
-            serviceCollection.AddAutofac((autofac) => { });
+            serviceCollection.AddFluentUIComponents();
+            var builder = new ContainerBuilder();
 
-
-
-            Resources.Add("services", serviceCollection.BuildServiceProvider());
+            builder.Populate(serviceCollection);
+            builder.AddAppService();
+            var autofac = new AutofacServiceProvider(builder.Build());
+            Resources.Add("services", autofac);
             double x1 = SystemParameters.PrimaryScreenWidth * 0.6;//得到屏幕整体宽度
             double y1 = SystemParameters.PrimaryScreenHeight * 0.6;//得到屏幕整体高度
             this.Width = x1;//设置窗体宽度
@@ -46,7 +51,7 @@ namespace APP
             SizeChanged += OnWindowSizeChanged;
             AppDomain.CurrentDomain.UnhandledException += (sender, error) =>
             {
-                MessageBox.Show($"程序崩溃请重启{error}", "Error");
+                System.Windows.MessageBox.Show($"程序崩溃请重启{error}", "Error");
 
             };
             InitializeComponent();
