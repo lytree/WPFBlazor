@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APP", "src\APP\APP.csproj", "{E2834E2A-A00C-451E-BF8C-60B967C26FE9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Shared", "src\APP.Shared\App.Shared.csproj", "{2444E3FA-1A81-4B41-B3BF-CC0F2FFEE9E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APP.Shared", "src\APP.Shared\APP.Shared.csproj", "{2444E3FA-1A81-4B41-B3BF-CC0F2FFEE9E8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APP.Infrastructure", "src\APP.Infrastructure\APP.Infrastructure.csproj", "{421F6C4D-C278-4BAE-AF89-EABADBE698D9}"
 EndProject

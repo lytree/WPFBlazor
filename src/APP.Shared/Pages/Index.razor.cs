@@ -9,15 +9,10 @@ using Autofac;
 using APP.Infrastructure.Events;
 using CommunityToolkit.Mvvm.Messaging;
 
-namespace App.Shared.Pages;
+namespace APP.Shared.Pages;
 
 public partial class Index
 {
 
     [Inject] IServiceProvider ServiceProvider { get; set; }
-
-    protected override async Task OnInitializedAsync()
-    {
-      
-    }
 }
