@@ -1,21 +1,22 @@
 ﻿@inherits LayoutComponentBase
 <ErrorBoundary>
-    <ChildContent>
-        <main class="h-full">
-            <FluentMainLayout NavMenuTitle="Navigation menu">
-                <Header></Header>
-                <NavMenuContent>
-                    <FluentNavLink Href="/" Text="Home">Home</FluentNavLink>
-                </NavMenuContent>
-                <Body>
-                    @Body
-                </Body>
+	<ChildContent>
+		<main class="h-full">
+			<FluentMainLayout NavMenuTitle="Navigation menu">
+				<Header></Header>
+				<NavMenuContent>
+					<FluentNavLink Href="/" Text="Home">Home</FluentNavLink>
+				</NavMenuContent>
+				<Body>
+					@Body
+				</Body>
 
-            </FluentMainLayout>
-            <FluentDialogProvider />
-        </main>
-    </ChildContent>
-    <ErrorContent>
-        <p class="errorUI">😈 A rotten gremlin got us. Sorry!</p>
-    </ErrorContent>
+			</FluentMainLayout>
+			<FluentFooter></FluentFooter>
+			<FluentDialogProvider />
+		</main>
+	</ChildContent>
+	<ErrorContent>
+		<p class="errorUI">😈 A rotten gremlin got us. Sorry!</p>
+	</ErrorContent>
 </ErrorBoundary>
