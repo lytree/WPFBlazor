@@ -8,7 +8,8 @@
     <base href="/" />
     <link href="index.css" rel="stylesheet" />
     <link href="App.styles.css" rel="stylesheet" />
-    <script src="_content/Microsoft.FluentUI.AspNetCore.Components/js/web-components-v2.5.16.min.js" type="module" async></script>
+
+    <script app-name="APP" src="_content/Microsoft.FluentUI.AspNetCore.Components/js/initializersLoader.webview.js"></script>
     <link href="_content/Microsoft.FluentUI.AspNetCore.Components/css/reboot.css" rel="stylesheet" />
     <link href="_content/APP.Shared/css/global.css" rel="stylesheet" />
     <link href="_content/APP.Shared/lib/uno.css" rel="stylesheet" />
@@ -23,10 +24,11 @@
             location.reload();
         };</script>
     <div id="app">
-        
+
     </div>
 
     <script src="_framework/blazor.webview.js"></script>
+    <script src="_content/Microsoft.FluentUI.AspNetCore.Components/js/web-components-v2.5.16.min.js" type="module" async></script>
 </body>
 
 </html>

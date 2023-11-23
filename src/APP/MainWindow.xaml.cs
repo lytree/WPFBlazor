@@ -2,6 +2,7 @@
 using APP.Infrastructure.Constant;
 using APP.Infrastructure.Events;
 using Autofac;
+using Autofac.Core;
 using Autofac.Extensions.DependencyInjection;
 using CommunityToolkit.Mvvm.Messaging;
 using Microsoft.Extensions.DependencyInjection;
@@ -35,7 +36,10 @@ namespace APP
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddWpfBlazorWebView();
             serviceCollection.AddBlazorWebViewDeveloperTools();
+         
+			
             serviceCollection.AddFluentUIComponents();
+            serviceCollection.AddHttpClient();
             var builder = new ContainerBuilder();
 
             builder.Populate(serviceCollection);

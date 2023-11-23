@@ -7,6 +7,10 @@
 	<UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="..\APP.Shared\Layout\ErrorBoundary.razor" Link="ErrorBoundary.razor" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<PackageReference Include="Autofac" Version="7.1.0" />
 		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
