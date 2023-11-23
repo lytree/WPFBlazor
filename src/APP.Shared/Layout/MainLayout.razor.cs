@@ -1,18 +1,12 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Rendering;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
+namespace APP.Shared.Layout;
 
-namespace App.Shared.Layout
+public partial class MainLayout
 {
-    public partial class MainLayout
-    {
-        public MainLayout()
-        {
-
-        }
-    }
+    bool expanded = true;
 }

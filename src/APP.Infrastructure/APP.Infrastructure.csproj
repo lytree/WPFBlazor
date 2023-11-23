@@ -1,12 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFrameworks>net8.0</TargetFrameworks>
+
 	</PropertyGroup>
 	<PropertyGroup>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 	</ItemGroup>
 </Project>
