@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace APP.Shared.Layout;
+namespace APP.Infrastructure;
 
-public partial class MainLayout
+public class ConfigurationSQLite
 {
-    bool expanded = false;
 }
