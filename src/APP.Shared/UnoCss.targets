@@ -8,23 +8,11 @@
 
 	<!-- For old school inclusion -->
 	<PropertyGroup>
-		<RunDependsOn>
-			UnoCSSRunner;
-			$(RunDependsOn);
-		</RunDependsOn>
 		<BuildDependsOn>
 			UnoCSSBuild;
 			$(BuildDependsOn);
 		</BuildDependsOn>
 	</PropertyGroup>
-
-	<Target Name="UnoCSSRunner" BeforeTargets="Run" >
-		<Message Text="PostCssCompile: Compiling " Importance="high" />
-
-		<Exec
-			Command="$(NodeCli) $(UnoCSSRunner)"
-			WorkingDirectory="$(MSBuildProjectDirectory)" />
-	</Target>
 
 	<Target Name="UnoCssBuild" BeforeTargets="Build" >
 		<Message Text="PostCssCompile: Compiling" Importance="high" />

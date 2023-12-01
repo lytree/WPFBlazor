@@ -1,5 +1,19 @@
 ﻿@page "/Data/NBTool"
 
-<div>
-	/Data/NBTool
-</div>
+<FluentCard>
+	<FluentGrid Spacing="3" Justify="JustifyContent.Center">
+		<FluentGridItem Justify="JustifyContent.FlexEnd" xs="6" sm="1">
+			<FluentLabel Typo="Typography.Body" Class="mr-5px">路径</FluentLabel>
+		</FluentGridItem>
+		<FluentGridItem Justify="JustifyContent.Center" xs="6" sm="9">
+			<FluentTextField @bind-Value=path.PathStr Class="w-full" Disabled></FluentTextField>
+			</FluentGridItem>
+			<FluentGridItem Justify="JustifyContent.FlexStart" xs="6" sm="2">
+				<FluentButton OnClick="@OpenFolder">选择路径</FluentButton>
+			</FluentGridItem>
+		</FluentGrid>
+	</FluentCard>
+	@code {
+
+	Path? path = new([]);
+	}

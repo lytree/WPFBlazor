@@ -1,45 +1,42 @@
 ﻿@page "/setting"
-<FluentCard>
-	<FluentGrid Spacing="3" Justify="@JustifyContent.FlexStart" Style="background-color: var(--neutral-layer-3);">
-		<FluentGridItem xs="12">
-			<div class="card">
-				xs="12"
-			</div>
-		</FluentGridItem>
-		<FluentGridItem xs="12" sm="6">
-			<div class="card">
-				xs="12" sm="6"
-			</div>
-		</FluentGridItem>
-		<FluentGridItem xs="12" sm="6">
-			<div class="card">
-				xs="12" sm="6"
-			</div>
-		</FluentGridItem>
-		<FluentGridItem xs="6" sm="3">
-			<div class="card">
-				xs="6" sm="3"
-			</div>
-		</FluentGridItem>
-		<FluentGridItem xs="6" sm="3">
-			<div class="card">
-				xs="6" sm="3"
-			</div>
-		</FluentGridItem>
-		<FluentGridItem xs="6" sm="3">
-			<div class="card">
-				xs="6" sm="3"
-			</div>
-		</FluentGridItem>
-		<FluentGridItem xs="6" sm="3">
-			<div class="card">
-				xs="6" sm="3"
-			</div>
-		</FluentGridItem>
-		<FluentGridItem xs="3">
-			<div class="card">
-				xs="3"
-			</div>
-		</FluentGridItem>
-	</FluentGrid>
-</FluentCard>
+
+<div class="flex flex-col">
+	<div class="w-full shadow-lg rounded-lg border-2">
+		<div class="m-5">
+			<div class="ml-20px">配置库设置</div>
+			<FluentCard Class="flex flex-row shadow-none rounded-none border-0">
+				<div class="basis-1/4">
+					<FluentTextField Class="" Label="IP 地址"></FluentTextField>
+				</div>
+				<div class="basis-1/4">
+					<FluentTextField Label="端口"></FluentTextField>
+				</div>
+				<div class="basis-1/4">
+					<FluentTextField Label="账号"></FluentTextField>
+				</div>
+				<div class="basis-1/4">
+					<FluentTextField Label="密码" TextFieldType="TextFieldType.Password"></FluentTextField>
+				</div>
+			</FluentCard>
+		</div>
+	</div>
+	<div class="w-full shadow-lg  rounded-lg border-2">
+		<div class="m-5">
+			<div class="ml-20px">数据库设置</div>
+			<FluentCard Class="flex flex-row shadow-none rounded-none border-0">
+				<div class="basis-1/4">
+					<FluentTextField Class="" Label="IP 地址"></FluentTextField>
+				</div>
+				<div class="basis-1/4">
+					<FluentTextField Label="端口"></FluentTextField>
+				</div>
+				<div class="basis-1/4">
+					<FluentTextField Label="账号"></FluentTextField>
+				</div>
+				<div class="basis-1/4">
+					<FluentTextField Label="密码" TextFieldType="TextFieldType.Password"></FluentTextField>
+				</div>
+			</FluentCard>
+		</div>
+	</div>
+</div>

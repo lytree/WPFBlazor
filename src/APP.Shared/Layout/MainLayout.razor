@@ -1,39 +1,41 @@
 ﻿@using APP.Shared.Icons
 @inherits LayoutComponentBase
-<ErrorBoundary>
-	<ChildContent>
-		<FluentLayout Class="h-full">
-			<FluentStack Class="h-full" Orientation="Orientation.Horizontal" Width="100%">
-				<div class="h-full shadow-2xl">
-					<FluentNavMenu Class="h-full flex" @bind-Expanded="@expanded" Width="200" Collapsible="true" Title="Collapsible demo">
-						<FluentNavLink Icon="@(new Fluent.Home().WithColor(Color.Neutral))" Href="/">首页</FluentNavLink>
-						<FluentNavGroup Title="计算" Icon="@(new Icons.Regular.Size24.EarthLeaf())">
-							<FluentNavLink Href="/Calc/LeafIndices">叶片指数计算</FluentNavLink>
-							<FluentNavLink Href="/Calc/LeafResult">计算记录</FluentNavLink>
-						</FluentNavGroup>
-						<FluentNavGroup Title="数据" Icon="@(new Icons.Regular.Size24.DataArea())">
-							<FluentNavLink Href="/Data/SQLIte">金风导入</FluentNavLink>
-							<FluentNavLink Href="/Data/NBTool">宁波导入</FluentNavLink>
-							<FluentNavLink Href="/Data/Screenshot">频谱图</FluentNavLink>
-						</FluentNavGroup>
-						<FluentSpacer />
-						<FluentNavLink Class="shrink" Icon="@(new Icons.Regular.Size24.Settings())" Href="/setting">设置</FluentNavLink>
-					</FluentNavMenu>
-				</div>
-				<FluentBodyContent Class="h-full">
-					<div class="h-screen px-4 py-4 pb-[24px] overflow-auto">
+
+<FluentLayout Class="h-full">
+	<FluentStack Class="h-full" Orientation="Orientation.Horizontal" Width="100%">
+		<div class="h-full shadow-2xl">
+			<FluentNavMenu Class="h-full flex" @bind-Expanded="@expanded" Width="200" Collapsible="true" Title="Collapsible demo">
+				<FluentNavLink Icon="@(new Fluent.Home().WithColor(Color.Neutral))" Href="/">首页</FluentNavLink>
+				<FluentNavGroup Title="计算" Icon="@(new Icons.Regular.Size24.EarthLeaf())">
+					<FluentNavLink Href="/Calc/LeafIndices">叶片指数计算</FluentNavLink>
+					<FluentNavLink Href="/Calc/LeafResult">计算记录</FluentNavLink>
+				</FluentNavGroup>
+				<FluentNavGroup Title="数据" Icon="@(new Icons.Regular.Size24.DataArea())">
+					<FluentNavLink Href="/Data/SQLIte">金风导入</FluentNavLink>
+					<FluentNavLink Href="/Data/NBTool">宁波导入</FluentNavLink>
+					<FluentNavLink Href="/Data/Screenshot">频谱图</FluentNavLink>
+				</FluentNavGroup>
+				<FluentSpacer />
+				<FluentNavLink Class="shrink" Icon="@(new Icons.Regular.Size24.Settings())" Href="/setting">设置</FluentNavLink>
+			</FluentNavMenu>
+		</div>
+		<FluentBodyContent Class="h-full">
+			<div class="h-screen px-4 py-4 pb-[24px] overflow-auto">
+				<ErrorBoundary>
+					<ChildContent>
 						@Body
-					</div>
-				</FluentBodyContent>
-			</FluentStack>
-			<FluentToastProvider />
-			<FluentDialogProvider />
-			<FluentTooltipProvider />
-		</FluentLayout>
-	</ChildContent>
-	<ErrorContent>
-		<p class="errorUI">😈 A rotten gremlin got us. Sorry!</p>
-	</ErrorContent>
-</ErrorBoundary>
+					</ChildContent>
+					<ErrorContent>
+						<p class="errorUI">😈 A rotten gremlin got us. Sorry!</p>
+					</ErrorContent>
+				</ErrorBoundary>
+			</div>
+		</FluentBodyContent>
+	</FluentStack>
+	<FluentToastProvider />
+	<FluentDialogProvider />
+	<FluentTooltipProvider />
+</FluentLayout>
+
 
 
